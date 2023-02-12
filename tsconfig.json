@@ -23,14 +23,15 @@
     "noStrictGenericChecks": false,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "target": "ESNext",
+    "target": "ES6",
     "allowJs": true
   },
   "exclude": [
-    "node_modules",
     "website",
     "example",
-    "coverage",
-    "packages/*/src/**/__tests__"
+    "packages/*/src/**/__tests__",
+    "packages/*/coverage/**",
+    "packages/*/dist/**",
+    "packages/*/*.config.js"
   ]
 }

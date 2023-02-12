@@ -84,7 +84,27 @@ export interface TooltipProps {
   animationType?: 'fade' | 'none';
 }
 
-/** Tooltips display informative text when users tap on an element. */
+/** Tooltips display informative text when users tap on an element.
+ * @usage
+ * ### Example
+ *```tsx live
+function RNETooltip() {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <Stack row align="center">
+      <Tooltip
+        visible={open}
+        onOpen={() => setOpen(true)}
+        onClose={() => setOpen(false)}
+        popover={<Text style={{color:'#fff'}}>Tooltip text</Text>}
+      >
+        Click me
+      </Tooltip>
+    </Stack>
+  );
+}
+ * ```
+ */
 export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   withOverlay = true,
   overlayColor = '#fafafa14',
@@ -193,7 +213,7 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   }, [dimensions, highlightColor]);
 
   const HighlightedButton: React.FC = () => {
-    if (closeOnlyOnBackdropPress) {
+    if (!closeOnlyOnBackdropPress) {
       return (
         <Pressable
           testID="tooltipTouchableHighlightedButton"
@@ -205,7 +225,12 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
       );
     } else {
       return (
-        <View style={TooltipHighlightedButtonStyle}>{props.children}</View>
+        <View
+          testID="tooltipTouchableHighlightedButton"
+          style={TooltipHighlightedButtonStyle}
+        >
+          {props.children}
+        </View>
       );
     }
   };

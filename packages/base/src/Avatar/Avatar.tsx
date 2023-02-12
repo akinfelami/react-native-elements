@@ -65,9 +65,6 @@ export interface AvatarProps extends InlinePressableProps {
   /** Style for the view outside image or icon. */
   overlayContainerStyle?: StyleProp<TextStyle>;
 
-  /** Opacity when pressed. */
-  activeOpacity?: number;
-
   /** Displays an icon as the main content of the Avatar. **Cannot be used alongside title**. When used with the `source` prop it will be used as the placeholder. */
   icon?: AvatarIcon;
 
@@ -93,7 +90,8 @@ export interface AvatarProps extends InlinePressableProps {
 /**
  * Avatars are found all over ui design from lists to profile screens.
  * They are commonly used to represent a user and can contain photos, icons, or even text.
- * @imports Avatar
+
+```
  * */
 export const Avatar: RneFunctionComponent<AvatarProps> = ({
   onPress,

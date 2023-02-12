@@ -8,8 +8,7 @@ import StartNow from '../components/StartNow';
 import RunOnExpo from '../components/RunOnExpo';
 import Community from '../components/Community';
 import { FigmaKit, VScodeExt } from '../components/Extentions';
-import OpenCollective from '../components/OpenCollective';
-import Sponsor from '../components/Sponsor';
+import { Sponsors } from '../components/Sponsor';
 import '../../static/css/components.css';
 
 const Home: React.FunctionComponent<{}> = () => {
@@ -23,10 +22,9 @@ const Home: React.FunctionComponent<{}> = () => {
       <RunOnExpo />
       {/* <FigmaKit /> */}
       <VScodeExt />
-      <Sponsor />
-      {/* <OpenCollective /> */}
+      <Sponsors />
       <Community />
-      <StartNow />
+      {/* <StartNow /> */}
     </Layout>
   );
 };

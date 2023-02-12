@@ -17,13 +17,13 @@ const Home: React.FunctionComponent<{}> = () => {
   return (
     <section>
       <header className="hero">
-        <div className="container ">
-          <div className="row" style={{ alignItems: 'center' }}>
+        <div className="container  padding-vert--xl">
+          <div
+            className="row padding-vert--md"
+            style={{ alignItems: 'center' }}
+          >
             <div className="col col--3 col--offset-1">
-              <img
-                className="rne-hero-logo"
-                src="/img/website/app-preview2.png"
-              />
+              <img className="rne-hero-logo" src="/img/website/logo.png" />
             </div>
             <div className="col col--6 col--offset-1">
               <h1 className="hero__title">
@@ -53,24 +53,24 @@ const Home: React.FunctionComponent<{}> = () => {
                 >
                   Sponsor Us
                 </Link>
-                <div className="ball" style={{ left: 80, top: '20%' }}>
-                  <SiReact />
-                </div>
-                <div className="ball" style={{ bottom: 200, right: '5%' }}>
-                  <MdAccessibleForward />
-                </div>
-                <div className="ball" style={{ left: 20, top: '70%' }}>
-                  <MdInvertColors />
-                </div>
-                <div className="ball" style={{ right: '40%', bottom: 10 }}>
-                  <MdAndroid />
-                </div>
-                <div className="ball" style={{ left: '40%', top: 180 }}>
-                  <SiIos />
-                </div>
-                <div className="ball" style={{ right: 270, top: 140 }}>
-                  <MdLaptopMac />
-                </div>
+              </div>
+              <div className="ball" style={{ left: 80, top: '20%' }}>
+                <SiReact />
+              </div>
+              <div className="ball" style={{ bottom: 200, right: '5%' }}>
+                <MdAccessibleForward />
+              </div>
+              <div className="ball" style={{ left: 20, top: '70%' }}>
+                <MdInvertColors />
+              </div>
+              <div className="ball" style={{ right: '40%', bottom: 90 }}>
+                <MdAndroid />
+              </div>
+              <div className="ball" style={{ left: '40%', top: 180 }}>
+                <SiIos />
+              </div>
+              <div className="ball" style={{ right: 270, top: 140 }}>
+                <MdLaptopMac />
               </div>
             </div>
           </div>
